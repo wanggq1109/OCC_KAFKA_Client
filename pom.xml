@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <name>OCC_KAFKA_Client</name>
+    <groupId>OCC</groupId>
+    <artifactId>OCC_KAFKA_Client</artifactId>
+    <version>0.4.1</version>
+    <packaging>jar</packaging>
+
+    <build>
+        <resources>
+            <resource>
+                <directory>src/main/resources</directory>
+                <filtering>true</filtering>
+                <excludes>
+                    <exclude>log4j.properties</exclude>
+                </excludes>
+            </resource>
+        </resources>
+    </build>
+    <dependencies>
+        <!--=========================== Kafka ========================================================================-->
+        <dependency>
+            <groupId>org.apache.kafka</groupId>
+            <artifactId>kafka_2.9.2</artifactId>
+            <version>0.8.2.1</version>
+        </dependency>
+        <!--=========================== Apache Commons ========================================================================-->
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.1</version>
+        </dependency>
+        <!--=========================== JSON ========================================================================-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.1.31</version>
+        </dependency>
+    </dependencies>
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <url>http://maven.oschina.net/content/groups/public/</url>
+
+        </repository>
+    </repositories>
+</project>
